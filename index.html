@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+<html lang="fr" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}" x-data="{dtIsOpen: false}">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -44,6 +44,29 @@
         x-transition.duration800ms
         class="menu"
       >
+      <button>
+        aria-controls="SecondNav"
+        @click="dtIsOpen = ! dtIsOpen"
+        class="header_dtBtn"
+      >
+      </button>
+      <nav id="SecondNav"
+        x-show="dtIsOpen"
+        x-transition.duration800ms
+        class="2menu"
+
+      <dl>
+        <dt>Lorem.</dt>
+        <dd>Lorem ipsum dolor sit amet.</dd>
+      </dl>
+      <dl>
+        <dt>Odit.</dt>
+        <dd>Ratione quisquam corporis tenetur cumque.</dd>
+      </dl>
+      <dl>
+        <dt>Optio!</dt>
+        <dd>Perferendis quam veniam exercitationem saepe!</dd>
+      </dl>
         <ul>
           <li><a href="#">item 1</a></li>
           <li><a href="#">item 2</a></li>
