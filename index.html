@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}" x-data="{dtIsOpen: false}">
+<html lang="fr" :class="{noscroll:menuIsOpen,}">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -31,7 +31,8 @@
     <!-- https://emmet.io/ -->
     <!-- header>h1{Test de menu} -->
     <header>
-      <button 
+      <section x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+        <button 
         aria-controls="mainNav"
         @click="menuIsOpen = ! menuIsOpen"
         class="header_menuBtn"
@@ -44,36 +45,36 @@
         x-transition.duration800ms
         class="menu"
       >
-      <button aria-controls="SecondNav"
-      @click="dtIsOpen = ! dtIsOpen"
-      class="header_dtBtn"
+      </section>
+      <section  x-data="{dtIsOpen: false}" :class="{noscroll:dtIsOpen,}">
+        <button 
+        aria-controls="SecondNav"
+        @click="dtIsOpen = ! dtIsOpen"
+        class="header_dtBtn"
       >
       <nav id="SecondNav">
         x-show="dtIsOpen"
-        x-transition.duration.800ms
+        x-transition.duration800ms
         class="2menu"
         </nav>
       >
       </button>
+    </section>
 
 
-      <dl>
-        <dt>Lorem.</dt>
-        <dd>Lorem ipsum dolor sit amet.</dd>
-      </dl>
-      <dl>
-        <dt>Odit.</dt>
-        <dd>Ratione quisquam corporis tenetur cumque.</dd>
-      </dl>
-      <dl>
-        <dt>Optio!</dt>
-        <dd>Perferendis quam veniam exercitationem saepe!</dd>
-      </dl>
-        <ul>
-          <li><a href="#">item 1</a></li>
-          <li><a href="#">item 2</a></li>
-          <li><a href="#">item 3</a></li>
-        </ul>
+
+<nav>
+  <h4>menu</h4>
+  <ul>
+    <li><a href="index.html">Les chats</a></li>
+    <ul>
+      <li><a href="chat-1.html">chat 1</a></li>
+      <li><a href="chat-2.html">chat 2</a></li>
+    </ul>
+    <li></li>
+    <a href=""></a>
+  </ul>
+</nav>
       </nav>
     </header>
     <!-- h2>lorem2^p>lorem -->
