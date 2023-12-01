@@ -35,55 +35,16 @@
         <button 
         aria-controls="mainNav"
         @click="menuIsOpen = ! menuIsOpen"
-        class="header_menuBtn"
-      >
-        menu
-      </button>
+        class="header_menuBtn">Menu</button>
       <h1>Test de menu</h1>
       <nav id="mainNav"
         x-show="menuIsOpen"
         x-transition.duration800ms
-        class="menu"
-      >
+        class="menu">
       </section>
-      <section  x-data="{dtIsOpen: false}" :class="{noscroll:dtIsOpen,}">
-        <button 
-        aria-controls="SecondNav"
-        @click="dtIsOpen = ! dtIsOpen"
-        class="header_dtBtn"
-      >
-      <nav id="SecondNav">
-        x-show="dtIsOpen"
-        x-transition.duration800ms
-        class="2menu"
-        </nav>
-      >
-      </button>
-    </section>
-
-
-
-<nav>
-  <h4>menu</h4>
-  <ul>
-    <li><a href="index.html">Les chats</a></li>
-    <ul>
-      <li><a href="chat-1.html">chat 1</a></li>
-      <li><a href="chat-2.html">chat 2</a></li>
-    </ul>
-    <li></li>
-    <a href=""></a>
-  </ul>
-</nav>
-      </nav>
-    </header>
-    <!-- h2>lorem2^p>lorem -->
-    <h2>Lorem, ipsum.</h2>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
-      mollitia adipisci alias error laboriosam numquam incidunt magni eum eos
-      nemo aliquid pariatur quam voluptates animi laudantium, aperiam
-      consectetur nobis enim.
-    </p>
-  </body>
-</html>
+      <section>
+        <a href="/fr/français.html">Accueil en Français</a>
+      </section>
+      <section>
+        <a href="/en/anglais.html">Home in English</a>
+      </section>
